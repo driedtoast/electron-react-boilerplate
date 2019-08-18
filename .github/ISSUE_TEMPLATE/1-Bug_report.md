@@ -1,10 +1,20 @@
-<<<<<<< HEAD
+---
+name: Bug report
+about: You're having technical issues.
+labels: 'bug'
+---
+
+<!-- Please use the following issue template or your issue will be closed. -->
+
 <!--- Provide a general summary of the issue in the Title above -->
 
 ## Prerequisites
 
+<!-- If the following boxes are not ALL checked, your issue is likely to be closed. -->
+
 - [ ] Using yarn
-- [ ] Using an up-to-date master branch
+- [ ] Using node 10.x
+- [ ] Using an up-to-date [`master` branch](https://github.com/electron-react-boilerplate/electron-react-boilerplate/tree/master)
 - [ ] Using latest version of devtools. See [wiki for howto update](https://github.com/electron-react-boilerplate/electron-react-boilerplate/wiki/DevTools)
 - [ ] Link to stacktrace in a Gist (for bugs)
 - [ ] For issue in production release, devtools output of `DEBUG_PROD=true yarn build && yarn start`
@@ -52,9 +62,3 @@
 - Version or Branch used :
 - Operating System and version :
 - Link to your project :
-=======
-<!-- 
-  Is this a bug report?
-  If so, go back and select the "Bug report" option or your issue WILL be closed.
---!>
->>>>>>> correct typo in CheckBuildsExist script to match main function name (#2221)

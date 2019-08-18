@@ -195,7 +195,6 @@ export default merge.smart(baseConfig, {
       }
     ]
   },
-
   plugins: [
     requiredByDLLConfig
       ? null
