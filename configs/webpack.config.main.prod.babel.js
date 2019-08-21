@@ -6,11 +6,7 @@ import path from 'path';
 import webpack from 'webpack';
 import merge from 'webpack-merge';
 import TerserPlugin from 'terser-webpack-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import baseConfig from './webpack.config.base';
-import CheckNodeEnv from '../internals/scripts/CheckNodeEnv';
-
-CheckNodeEnv('production');
 
 export default merge.smart(baseConfig, {
   devtool: 'source-map',
@@ -39,12 +35,6 @@ export default merge.smart(baseConfig, {
   },
 
   plugins: [
-    new BundleAnalyzerPlugin({
-      analyzerMode:
-        process.env.OPEN_ANALYZER === 'true' ? 'server' : 'disabled',
-      openAnalyzer: process.env.OPEN_ANALYZER === 'true'
-    }),
-
     /**
      * Create global constants which can be configured at compile time.
      *

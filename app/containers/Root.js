@@ -1,15 +1,10 @@
-// @flow
-import React, { Component } from 'react';
-import Routes from '../Routes';
+// 
+import React from 'react';
+import { hot } from 'react-hot-loader/root';
+import HomePage from 'HomePage';
 
-export default class Root extends Component {
-  render() {
-    return (
-      <Provider>
-        <ConnectedRouter>
-          <Routes />
-        </ConnectedRouter>
-      </Provider>
-    );
-  }
-}
+const Root = ({ store, history }) => (
+  <HomePage />
+);
+
+export default hot(Root);

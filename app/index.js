@@ -4,6 +4,8 @@ import { AppContainer } from 'react-hot-loader';
 import Root from './containers/Root';
 import './app.global.css';
 
+const AppContainer = process.env.PLAIN_HMR ? Fragment : ReactHotAppContainer;
+
 render(
   <AppContainer>
     <Root  />
@@ -11,15 +13,3 @@ render(
   document.getElementById('root')
 );
 
-if (module.hot) {
-  module.hot.accept('./containers/Root', () => {
-    // eslint-disable-next-line global-require
-    const Root = require('./containers/Root').default;
-    render(
-      <AppContainer>
-        <Root />
-      </AppContainer>,
-      document.getElementById('root')
-    );
-  });
-}
